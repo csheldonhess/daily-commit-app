@@ -1,5 +1,7 @@
 Daily Commit App
 ================
-No longer will my GitHub streaks be less than perfect!Enjoy this pseudorandom image:
+No longer will my GitHub streaks be less than perfect!
 
-![a bear](http://placebear.com/500/400 "a bear")
+Enjoy this pseudorandom image:
+
+![a kitten](http://placekitten.com/600/300 "a kitten")

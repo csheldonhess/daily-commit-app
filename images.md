@@ -1,4 +1,4 @@
 A pseudorandom image!
 ====================
 
-![Nick Cage](http://www.placecage.com/500/425/ "Nick Cage")
+![Bill Murray](http://www.fillmurray.com/700/600/ "Bill Murray")

@@ -28,6 +28,8 @@ url = site + width + '/' + height
 
 content = 'Daily Commit App\n================\nNo longer will my GitHub streaks be less than perfect!'
 content += '\n\nEnjoy this pseudorandom image:\n\n![{0}]({1} "{0}")'.format(alt, url)
+content += '\n\nKnown issue: there are some images missing from some of these. It seems a little random. '
+content += 'Sorry if no image has appeared.'
 
 # Grab a file
 file_to_update = r.contents('README.md')

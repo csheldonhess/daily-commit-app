@@ -1,4 +1,5 @@
-daily-commit-app
+Daily Commit App
 ================
+No longer will my GitHub streaks be less than perfect!Enjoy this pseudorandom image:
 
-No longer will my GitHub streaks be less than perfect!
+![a bear](http://placebear.com/500/400 "a bear")

@@ -27,7 +27,7 @@ height = str(random.randrange(1,9) * 100)
 url = site + width + '/' + height
 
 content = 'Daily Commit App\n================\nNo longer will my GitHub streaks be less than perfect!'
-content += 'Enjoy this pseudorandom image:\n\n![{0}]({1} "{0}")'.format(alt, url)
+content += '\n\nEnjoy this pseudorandom image:\n\n![{0}]({1} "{0}")'.format(alt, url)
 
 # Grab a file
 file_to_update = r.contents('README.md')

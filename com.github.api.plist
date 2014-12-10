@@ -11,7 +11,7 @@
         <key>ProgramArguments</key>
         <array>
                 <string>/usr/local/bin/python</string>
-                <string>/Users/coral/code/daily-commit-app/do_the_thing.py</string>
+                <string>/Users/YOURUSERNAME/code/daily-commit-app/do_the_thing.py</string>
         </array>
         <key>StartCalendarInterval</key>
         <array>

@@ -2,37 +2,57 @@ import github3
 from datetime import datetime
 import random
 
-#authenticate
-g = github3.login(token='14bce8088bbdccc9e3b242259563081db15b0381')
+token = ''
+username = ''
+repo = ''
 
-# Retrieve the repo
-r = g.repository('csheldonhess', 'daily-commit-app')
+def get_the_substring(full_string, substring_category):
+    # The +1 cuts out the quotation mark
+    index1 = full_string.find('"', full_string.rfind(substring_category)) + 1
+    # No +1 needed on this end
+    index2 = full_string.find('"', index1)
+    substring = full_string[index1:index2]
+    return substring
 
-time = str(datetime.now())
+with open('auth.txt', 'r') as f:
+    text = f.read()
+    token = get_the_substring(text, 'token')
+    username = get_the_substring(text, 'username')
+    repo = get_the_substring(text, 'repo')
 
-commit_message = 'Made a change on {0}'.format(time)
+    #authenticate
+    g = github3.login(token=token)
 
-sites = {'http://placebear.com/': 'a bear',
-		 'http://www.placecage.com/': 'Nick Cage',
-		 'http://www.fillmurray.com/': 'Bill Murray',
-		 'http://placekitten.com/': 'a kitten'
-}
+    # Retrieve the repo
+    r = g.repository(username, repo)
 
-site = random.choice(list(sites.keys()))
-alt = sites.get(site)
+    time = str(datetime.now())
 
-width = str(random.randrange(1,9) * 100)
-height = str(random.randrange(1,9) * 100)
+    commit_message = 'Made a change on {0}'.format(time)
 
-url = site + width + '/' + height
+    sites = {'http://placebear.com/': 'a bear',
+             'http://www.placecage.com/': 'Nick Cage',
+             'http://www.fillmurray.com/': 'Bill Murray',
+             'http://placekitten.com/': 'a kitten'
+    }
 
-content = 'Daily Commit App\n================\nNo longer will my GitHub streaks be less than perfect!'
-content += '\n\nEnjoy this pseudorandom image:\n\n![{0}]({1} "{0}")'.format(alt, url)
-content += '\n\nKnown issue: there are some images missing from some of these. It seems a little random. '
-content += 'Sorry if no image has appeared.'
+    site = random.choice(list(sites.keys()))
+    alt = sites.get(site)
 
-# Grab a file
-file_to_update = r.contents('README.md')
-the_sha = file_to_update.sha
+    width = str(random.randrange(1,9) * 100)
+    height = str(random.randrange(1,9) * 100)
 
-r.update_file('README.md', commit_message, content, the_sha)
+    url = site + width + '/' + height
+
+    content = 'Daily Commit App\n================\nNo longer will my GitHub streaks be less than perfect!'
+    content += '\n\nEnjoy this pseudorandom image:\n\n![{0}]({1} "{0}")'.format(alt, url)
+    content += '\n\nKnown issue: there are some images missing from some of these. It seems a little random. '
+    content += 'Sorry if no image has appeared.'
+
+    # Grab a file
+    file_to_update = r.contents('README.md')
+    the_sha = file_to_update.sha
+
+    r.update_file('README.md', commit_message, content, the_sha)
+
+    

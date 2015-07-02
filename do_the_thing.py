@@ -3,7 +3,7 @@ from datetime import datetime
 import random
 
 #authenticate
-g = github3.login(token='')
+g = github3.login(token='14bce8088bbdccc9e3b242259563081db15b0381')
 
 # Retrieve the repo
 r = g.repository('csheldonhess', 'daily-commit-app')

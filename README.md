@@ -4,6 +4,6 @@ No longer will my GitHub streaks be less than perfect!
 
 Enjoy this pseudorandom image:
 
-![Nick Cage](http://www.placecage.com/100/600 "Nick Cage")
+![a kitten](http://placekitten.com/400/400 "a kitten")
 
 Known issue: there are some images missing from some of these. It seems a little random. Sorry if no image has appeared.

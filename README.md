@@ -4,6 +4,6 @@ No longer will my GitHub streaks be less than perfect!
 
 Enjoy this pseudorandom image:
 
-![Bill Murray](http://www.fillmurray.com/700/300 "Bill Murray")
+![a kitten](http://placekitten.com/400/500 "a kitten")
 
 Known issue: there are some images missing from some of these. It seems a little random. Sorry if no image has appeared.
